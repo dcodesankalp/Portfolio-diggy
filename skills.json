@@ -1,0 +1,7 @@
+[
+  {"name":"Web Development","domain":"Web","rating":8.5,"icon":"web.svg"},
+  {"name":"AI/ML","domain":"AI","rating":7.6,"icon":"ai.svg"},
+  {"name":"Cybersecurity","domain":"Security","rating":8.0,"icon":"lock.svg"},
+  {"name":"Data Analysis","domain":"Data","rating":7.2,"icon":"data.svg"},
+  {"name":"Ethical Hacking","domain":"Security","rating":7.8,"icon":"hack.svg"}
+]

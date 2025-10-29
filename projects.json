@@ -1,0 +1,6 @@
+[
+  {"title":"Portfolio Website","tags":["Web","Frontend"],"date":"2025-06-15","rating":9,"difficulty":6,"images":[],"desc":"Dynamic portfolio with analytics"},
+  {"title":"ML Image Classifier","tags":["AI","ML"],"date":"2025-04-06","rating":8,"difficulty":7,"images":[],"desc":"Prototype classifier for images"},
+  {"title":"Vulnerability Scanner","tags":["Security","Ethical Hacking"],"date":"2025-08-01","rating":9,"difficulty":8,"images":[],"desc":"Automated scanner tool"},
+  {"title":"Data Dashboard","tags":["Data","Web"],"date":"2025-07-12","rating":8,"difficulty":6,"images":[],"desc":"Interactive data visualization"}
+]
