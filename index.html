@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Digambar — Futuristic Portfolio</title>
+
+  <!-- Playfair Display for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/storage/emulated/0/style.css">
+
+  <!-- Chart.js for analytics charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body data-theme="dark">
+  <div class="container">
+
+    <header>
+      <div class="brand">
+        <div class="logo">DB</div>
+        <div class="site-title">
+          <h1>Digambar Bavaskar</h1>
+          <p class="small-muted">Dynamic Portfolio — Futuristic</p>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div style="display:flex;gap:8px;align-items:center;">
+        <button id="themeToggle" class="chip">Toggle Theme</button>
+        <button id="viewAnalytics" class="chip">View My Analytical Dashboard</button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div>
+        <h1 class="title">Hi — I'm Digambar</h1>
+        <div class="tagline">A full-stack curious mind building across <span id="typed" class="typed">Web, AI, Security</span></div>
+        <p class="small-muted">I build practical projects, study cybersecurity, AI, data analysis and web technologies. This portfolio is dynamic — content loads from JSON and analytics are auto-generated.</p>
+        <div style="margin-top:12px;display:flex;gap:8px;">
+          <a class="chip" href="#projects">See Projects</a>
+          <a class="chip" href="#contact">Hire / Contact</a>
+          <a class="chip" id="downloadResume" href="#">Download Resume</a>
+        </div>
+      </div>
+
+      <div class="profile">
+        <div class="avatar">DB</div>
+        <div class="small-muted">Based in India • Mobile-first development</div>
+        <div style="margin-top:8px;">
+          <a class="chip" href="#" target="_blank">GitHub</a>
+          <a class="chip" href="#" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-title">
+        <h3>About</h3>
+        <div class="small-muted">Short intro</div>
+      </div>
+      <p>I’m building a dynamic portfolio that showcases 5 skill domains: Web Development, AI/ML, Cybersecurity, Data Analysis, and Ethical Hacking. Content is data-driven so analytics update automatically.</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-title">
+        <h3>Skills</h3>
+        <div class="small-muted">Animated skill scores</div>
+      </div>
+
+      <div class="skills-grid" id="skillsGrid"></div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-title">
+        <h3>Projects</h3>
+        <div class="small-muted">Filter & sort your work</div>
+      </div>
+
+      <div class="controls-row">
+        <div id="chips" class="chips-wrapper"></div>
+
+        <div style="margin-left:auto; display:flex; gap:8px;">
+          <select id="sortSelect" class="chip">
+            <option value="newest">Sort: Newest</option>
+            <option value="rating">Sort: Rating</option>
+            <option value="difficulty">Sort: Difficulty</option>
+          </select>
+          <input id="searchProject" class="chip" style="padding:8px 12px;border-radius:999px" placeholder="Search projects..." />
+        </div>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid"></div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="section-title">
+        <h3>Experience & Resume</h3>
+        <div class="small-muted">Timeline & downloadable resume</div>
+      </div>
+
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="section-title">
+        <h3>FAQ</h3>
+        <div class="small-muted">Common questions</div>
+      </div>
+
+      <div class="faq">
+        <div>
+          <q>Can visitors contact you?</q>
+          <div class="a">Yes — via the contact form. Messages are sent to an email using a secure backend.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-title">
+        <h3>Contact</h3>
+        <div class="small-muted">Let's build something together</div>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          <h4 class="small-muted">Send a message</h4>
+          <div style="margin-top:10px;"></div>
+          <input id="nameField" class="input" placeholder="Your name" />
+          <div style="height:10px"></div>
+          <input id="emailField" class="input" placeholder="Your email" />
+          <div style="height:10px"></div>
+          <textarea id="messageField" class="input" rows="6" placeholder="Message..."></textarea>
+          <div style="height:10px"></div>
+          <button id="sendBtn" class="btn">Send Message</button>
+          <div id="contactStatus" class="small-muted" style="margin-top:8px;"></div>
+        </div>
+
+        <div>
+          <h4 class="small-muted">Quick contact</h4>
+          <p class="small-muted">Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+          <p class="small-muted">WhatsApp: <a href="#">+91 xxxxx</a></p>
+          <p class="small-muted">Follow: GitHub / LinkedIn / YouTube</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>Made with ❤️ • Futuristic Portfolio</footer>
+  </div>
+
+  <!-- ANALYTICS OVERLAY -->
+  <div id="overlay" class="overlay" aria-hidden="true">
+    <div class="panel" role="dialog" aria-modal="true" aria-labelledby="analyticsTitle">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:8px;">
+        <div>
+          <h2 id="analyticsTitle" style="margin:0; font-family:var(--ff-head)">Portfolio Analytical Dashboard</h2>
+          <div class="small-muted">Auto-generated positive insights from your live data</div>
+        </div>
+        <div style="display:flex; gap:8px; align-items:center;">
+          <div id="overallBadge" class="chip">-- / 10</div>
+          <button id="closeOverlay" class="chip">Close</button>
+        </div>
+      </div>
+
+      <div style="height:12px"></div>
+
+      <div class="analytics-row" style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+        <div>
+          <canvas id="radarChart" style="width:100%;height:320px"></canvas>
+        </div>
+        <div>
+          <div style="display:flex; gap:12px; align-items:center; justify-content:space-between;">
+            <div>
+              <div class="small-muted">Skill Index</div>
+              <div id="skillIndex" style="font-size:20px;font-weight:700">-- / 10</div>
+            </div>
+            <div>
+              <div class="small-muted">Project Power</div>
+              <div id="projectPower" style="font-size:20px;font-weight:700">-- / 10</div>
+            </div>
+            <div>
+              <div class="small-muted">Experience Growth</div>
+              <div id="experienceGrowth" style="font-size:20px;font-weight:700">-- / 10</div>
+            </div>
+          </div>
+
+          <div style="height:12px"></div>
+          <div class="small-muted">Learning Consistency</div>
+          <div style="height:16px; background:rgba(255,255,255,0.04); border-radius:10px; overflow:hidden; margin-bottom:10px;">
+            <div id="consistencyBar" style="height:100%; width:0; background:linear-gradient(90deg,var(--accent),var(--accent-2));"></div>
+          </div>
+
+          <div class="small-muted">Innovation Index</div>
+          <div id="innovationIndex" style="font-size:18px;font-weight:700">-- / 10</div>
+
+          <div style="height:12px"></div>
+          <div id="aiFeedback" class="small-muted">Positive feedback will appear here based on your top skill.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="/storage/emulated/0/main.js"></script>
+  <script src="/storage/emulated/0/ui-tweaks.js"></script>
+</body>
+  </html>
