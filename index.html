@@ -6,8 +6,8 @@
   <title>Digambar — Futuristic Portfolio</title>
 
   <!-- Playfair Display for headings -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <!-- Chart.js for analytics charts -->
@@ -18,10 +18,14 @@
 
     <header>
       <div class="brand">
-        <div class="logo">DB</div>
+        <div class="logo">
+          <img src="image.jpg" 
+            alt="Digambar Bavaskar" 
+            class="logo-img">
+        </div>
         <div class="site-title">
           <h1>Digambar Bavaskar</h1>
-          <p class="small-muted">Dynamic Portfolio — Futuristic</p>
+          <p class="small-muted"> — OG Hustler</p>
         </div>
       </div>
 
@@ -42,22 +46,27 @@
     <!-- HERO -->
     <section id="home" class="hero">
       <div>
-        <h1 class="title">Hi — I'm Digambar</h1>
-        <div class="tagline">A full-stack curious mind building across <span id="typed" class="typed">Web, AI, Security</span></div>
-        <p class="small-muted">I build practical projects, study cybersecurity, AI, data analysis and web technologies. This portfolio is dynamic — content loads from JSON and analytics are auto-generated.</p>
+        <h1 class="title">Hi — I'm Diggy</h1>
+        <div class="tagline">A full-stack curious mind building across <span id="typed" class="typed">Web, AI, Security, Data Entry</span></div>
+        <p class="small-muted">I build practical projects, study cybersecurity, AI, data analysis and web technologies. This portfolio shows my experience, skills and A roaring mindset towards the technical problems facing by world.</p>
         <div style="margin-top:12px;display:flex;gap:8px;">
           <a class="chip" href="#projects">See Projects</a>
           <a class="chip" href="#contact">Hire / Contact</a>
-          <a class="chip" id="downloadResume" href="#">Download Resume</a>
+          <a class="chip" id="downloadResume" href="https://drive.google.com/file/d/1WGR1U0-8JBNpfH65U1xp-35Q67SUW9Wg/view?usp=drivesdk">Download Resume</a>
         </div>
       </div>
 
       <div class="profile">
-        <div class="avatar">DB</div>
-        <div class="small-muted">Based in India • Mobile-first development</div>
+        <div class="avatar">
+          <img src="image-logo.jpg" 
+            class="avatar">
+        </div>
+        <div class="small-muted">Founder • Dcode Sankalp / TheGameChanger / Cyber Sankalp </div>
         <div style="margin-top:8px;">
-          <a class="chip" href="#" target="_blank">GitHub</a>
-          <a class="chip" href="#" target="_blank">LinkedIn</a>
+          <a class="chip" href="https://github.com/dcodesankalp" target="_blank">GitHub</a>
+          <a class="chip" href="https://www.linkedin.com/in/digambar-bavaskar-6a4477395?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+          <a class="chip" href="https://www.instagram.com/dcodesankalp?igsh=emM2cjJwdmxycG9z" target="_blank">Instagram</a>
+          <a class="chip" href="https://youtube.com/@dcodesankalp?si=McFPh_I7bTgOSYCG" target="_blank">YouTube</a>
         </div>
       </div>
     </section>
@@ -66,9 +75,9 @@
     <section id="about">
       <div class="section-title">
         <h3>About</h3>
-        <div class="small-muted">Short intro</div>
+        <div class="small-muted">The Digambar Bavaskar</div>
       </div>
-      <p>I’m building a dynamic portfolio that showcases 5 skill domains: Web Development, AI/ML, Cybersecurity, Data Analysis, and Ethical Hacking. Content is data-driven so analytics update automatically.</p>
+      <p>I’m an aspiring AI & Cybersecurity professional currently pursuing a Btech in Applied AiML. With a growing skill set in Web Development, Data Analysis, Machine Learning, and Ethical Hacking, I combine creativity with problem-solving to build secure, intelligent, and scalable digital solutions. My focus is on delivering clean, modern websites, data-driven insights, and AI-powered tools that help individuals and businesses grow in the digital age. I’m continuously learning, building projects, and working towards mastering AI and Cybersecurity — aiming to create a meaningful impact through technology.</p>      
     </section>
 
     <!-- SKILLS -->
@@ -97,6 +106,21 @@
             <option value="rating">Sort: Rating</option>
             <option value="difficulty">Sort: Difficulty</option>
           </select>
+          <select id="categorySelect" class="chip">
+            <option value="all">Category: All</option>
+            <option value="editing">Editing</option>
+            <option value="cybersecurity">Cybersecurity</option>
+            <option value="aiml">AI/ML</option>
+            <option value="web">Web Development</option>
+            <option value="software">Software</option>
+            <option value="python">Python</option>
+            <option value="fullstack">Full Stack</option>
+            <option value="frontend">Frontend</option>
+            <option value="backend">Backend</option>
+            <option value="dataentry">Data Entry (Excel)</option>
+            <option value="datascience">Data Science</option>
+            <option value="dataanalytical">Data Analytical</option>
+           </select>
           <input id="searchProject" class="chip" style="padding:8px 12px;border-radius:999px" placeholder="Search projects..." />
         </div>
       </div>
@@ -123,8 +147,14 @@
 
       <div class="faq">
         <div>
-          <q>Can visitors contact you?</q>
-          <div class="a">Yes — via the contact form. Messages are sent to an email using a secure backend.</div>
+          <q>Can you customize or improve existing systems?</q>
+          <div class="a">Absolutely! I can audit, debug, or optimize your current applications — enhancing performance, adding new features, or upgrading to the latest technologies while maintaining data security.</div>
+          <q>What kind of projects do you work on?</q>
+          <div class="a">I specialize in end-to-end project development — from concept and UI/UX design to deployment. My key areas include Web Development, AI/ML, Cybersecurity, Data Analytics, and Automation. I enjoy working on practical, results-driven solutions.</div>
+          <q>Are you available for freelance or collaboration work?</q>
+          <div class="a">Yes! I’m open to freelance projects, internships, and long-term collaborations. You can reach out directly through the contact form or my social profiles for quick communication.</div>
+          <q>How long does it usually take to complete a project?</q>
+          <div class="a">It depends on the project’s complexity. Small web projects may take a few days, while AI or full-stack systems could take several weeks. I always provide clear timelines and consistent updates throughout the process.</div>
         </div>
       </div>
     </section>
@@ -152,14 +182,14 @@
 
         <div>
           <h4 class="small-muted">Quick contact</h4>
-          <p class="small-muted">Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-          <p class="small-muted">WhatsApp: <a href="#">+91 xxxxx</a></p>
-          <p class="small-muted">Follow: GitHub / LinkedIn / YouTube</p>
+          <p class="small-muted">Email: <a href="mailto:cybercraft.diggy@gmail.com">cybercraft.diggy@gmail.com</a></p>
+          <p class="small-muted">WhatsApp: <a href="https://wa.me/qr/55NJDCYEZIRFC1">+91 9244585113</a></p>
+          <p class="small-muted">Follow: GitHub / LinkedIn / YouTube / Instagram</p>
         </div>
       </div>
     </section>
 
-    <footer>Made with ❤️ • Futuristic Portfolio</footer>
+    <footer> © copyright • DcodeSankalp </footer>
   </div>
 
   <!-- ANALYTICS OVERLAY -->
@@ -218,4 +248,4 @@
   <script src="main.js"></script>
   <script src="ui-tweaks.js"></script>
 </body>
-</html>
+  </html>
