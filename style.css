@@ -67,8 +67,8 @@ nav a:hover{ color:var(--text); background:linear-gradient(180deg, rgba(255,255,
 .avatar{ width:128px; height:128px; border-radius:18px; display:flex; align-items:center; justify-content:center; font-family:var(--ff-head); font-weight:700; color:white; background: linear-gradient(135deg,var(--accent),var(--accent-2)); box-shadow: 0 10px 30px rgba(139,92,246,0.12); font-size:36px; }
 
 /* section common */
-section{ margin-bottom:18px; border-radius:14px; padding:16px; background:var(--card); border:var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
-.section-title{ display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+section{ margin-bottom:17px; border-radius:14px; padding:16px; background:var(--card); border:var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+.section-title{ display:flex; justify-content:space-between; align-items:center; margin-bottom:13px; }
 .section-title h3{ margin:0; font-family:var(--ff-head); font-size:20px; }
 .small-muted{ color:var(--muted); font-size:13px; }
 
@@ -122,3 +122,14 @@ footer{ text-align:center; color:var(--muted); font-size:13px; margin-top:8px; }
   nav{ display:none; } /* simplify nav on small screens */
 }
 
+.logo-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  transition: transform 0.3s ease;
+}
+.logo-img:hover {
+  transform: scale(1.1);
+}
